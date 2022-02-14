@@ -1,2 +1,2 @@
 # vite-reactts-base
-Vite + React + Prettier + Eslint + Absolute import
+Vite + React + Typescript + Prettier + Eslint + Absolute import
