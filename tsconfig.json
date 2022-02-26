@@ -22,7 +22,7 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "files": ["index.d.ts"],
+  "files": ["src/@types/index.d.ts"],
   "include": ["src", "vite.config.ts", "src/@types"],
   "exclude": ["node_modules", "../tsconfig.json"]
 }
