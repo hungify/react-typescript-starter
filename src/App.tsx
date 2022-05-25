@@ -1,23 +1,29 @@
 import './App.css';
-import React from 'react';
-import Counter from '~/components/Counter/Counter';
-import { ReactComponent as Logo } from './logo.svg';
+
+import { useState } from 'react';
+
+import logo from './logo.svg';
+import Counter from '~/components/Counter';
+import Login from '~/pages/Login';
+import Register from '~/pages/Register';
 
 function App() {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
       <header className="App-header">
-        <Logo width={'100%'} height={'40vmin'} />
+        <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
           </button>
         </p>
-        <Counter count={count} />
       </header>
+      <Counter count={count} />
+      <Login />
+      <Register />
     </div>
   );
 }
