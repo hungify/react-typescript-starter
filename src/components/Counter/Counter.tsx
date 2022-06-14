@@ -1,6 +1,6 @@
-type CounterProps = {
+interface CounterProps {
   count: number;
-};
+}
 
 function Counter({ count }: CounterProps) {
   return (
