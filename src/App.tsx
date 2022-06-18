@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from 'react';
 
 import logo from './logo.svg';
-import Counter from '~/components/Counter';
+import Counter from '~components/Counter';
 
 function App() {
   const [count, setCount] = useState(0);
