@@ -38,7 +38,9 @@
       "~/routes/*": ["src/routes/*"],
       "~/context/*": ["src/context/*"],
       "~/app/*": ["src/app/*"],
-      "~/models/*": ["src/models/*"]
+      "~/models/*": ["src/models/*"],
+      "~/api/*": ["src/api/*"],
+      "~modules/*": ["src/modules/*"]
     }
   },
   "include": ["src"],
