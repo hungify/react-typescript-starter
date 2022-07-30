@@ -1,7 +1,7 @@
 {
   "name": "vite-react-ts-starter",
-  "private": true,
-  "version": "0.0.2",
+  "private": false,
+  "version": "0.0.3",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,8 +10,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier": "npx prettier src --check",
     "prettier:fix": "npm run prettier -- --write",
-    "format": "npm run prettier:fix && npm run lint:fix",
-    "yarn:upgrade": "yarn yarn-upgrade-all"
+    "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -33,8 +32,7 @@
     "prettier": "^2.7.1",
     "typescript": "^4.7.4",
     "vite": "^3.0.2",
-    "vite-tsconfig-paths": "^3.5.0",
-    "yarn-upgrade-all": "^0.7.1"
+    "vite-tsconfig-paths": "^3.5.0"
   },
   "license": "MIT"
 }
