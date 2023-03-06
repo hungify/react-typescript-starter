@@ -6,14 +6,25 @@
       "jsx": true
     },
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "settings": {
     "react": {
       "pragma": "React",
       "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
     }
   },
+
   "plugins": [
     "prettier",
     "react",
@@ -24,29 +35,28 @@
     "promise"
   ],
   "extends": [
-    "prettier",
-    "prettier/@typescript-eslint",
-    "plugin:promise/recommended",
     "eslint:recommended",
+    "plugin:promise/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:import/typescript",
-    "plugin:prettier/recommended"
+    "eslint-config-prettier",
+    "prettier"
   ],
 
   "rules": {
     // ##########
     // # CUSTOM #
     // ##########
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-no-target-blank": "warn",
     "prettier/prettier": "error",
     "no-nested-ternary": "error",
     "no-unneeded-ternary": "error",
     "arrow-spacing": "error",
-    "no-confusing-arrow": [
-      "error",
-      { "allowParens": true, "onlyOneSimpleParam": false }
-    ],
+    "no-confusing-arrow": ["error", { "allowParens": true, "onlyOneSimpleParam": false }],
 
     // ###########
     // # PLUGINS #
@@ -59,13 +69,27 @@
         "selector": "variable",
         "types": ["boolean"],
         "format": ["PascalCase"],
-        "prefix": ["is", "should", "has", "can", "did", "will"]
+        "prefix": [
+          "is",
+          "should",
+          "has",
+          "can",
+          "did",
+          "will",
+          "has",
+          "get",
+          "set",
+          "should",
+          "must",
+          "expect",
+          "actual"
+        ]
       },
       {
         "selector": "interface",
         "format": ["PascalCase"],
         "custom": {
-          "regex": "^I[A-Z]",
+          "regex": "^[A-Z]",
           "match": true
         }
       },
@@ -73,7 +97,7 @@
         "selector": "typeAlias",
         "format": ["PascalCase"],
         "custom": {
-          "regex": "^T[A-Z]",
+          "regex": "^[A-Z]",
           "match": true
         }
       },
@@ -81,7 +105,7 @@
         "selector": "enumMember",
         "format": ["PascalCase"],
         "custom": {
-          "regex": "^E[A-Z]",
+          "regex": "^[A-Z]",
           "match": true
         }
       },
