@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "noUncheckedIndexedAccess": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
@@ -24,11 +24,12 @@
     "importsNotUsedAsValues": "error",
     "preserveValueImports": true,
     "baseUrl": ".",
+    "typeRoots": ["src/@types"],
     "paths": {
-      "~/*": ["src/*"],
+      "~/*": ["src/*"]
     }
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "vite.config.ts"],
+  "include": ["src/**/*", "vite.config.ts", ".eslintrc.*"],
+  "exclude": ["node_modules", "dist"],
   "references": [{ "path": "tsconfig.node.json" }]
 }
