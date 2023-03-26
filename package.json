@@ -4,14 +4,13 @@
   "version": "0.0.3",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "run-p type-check build-only",
+    "build-only": "vite build",
+    "type-check": "tsc --noEmit",
     "preview": "vite preview",
-    "lint": "eslint --ext ts,tsx src/",
-    "lint:fix": "eslint --fix --ext ts,tsx src/",
-    "prettier": "prettier --check \"src/**/(*.tsx|*.ts|*.css|*.scss)\"",
-    "prettier:fix": "prettier --write \"src/**/(*.tsx|*.ts|*.css|*.scss)\"",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "npx prettier --write .",
     "lint:staged": "lint-staged",
-    "format": "npm run prettier:fix && npm run lint:fix",
     "prepare": "husky install"
   },
   "dependencies": {

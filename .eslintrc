@@ -9,6 +9,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
+  "ignorePatterns": ["node_modules/", "dist/", "coverage/", "vite.config.ts"],
   "settings": {
     "react": {
       "pragma": "React",
