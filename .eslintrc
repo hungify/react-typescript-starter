@@ -33,9 +33,11 @@
     "import",
     "jsx-a11y",
     "react-hooks",
-    "promise"
+    "promise",
+    "@tanstack/query"
   ],
   "extends": [
+    "plugin:@tanstack/eslint-plugin-query/recommended",
     "eslint:recommended",
     "plugin:promise/recommended",
     "plugin:import/recommended",
@@ -162,6 +164,10 @@
     // # React
     "react/jsx-boolean-value": "error",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+
+    // #React Query
+    "@tanstack/query/exhaustive-deps": "error",
+    "@tanstack/query/prefer-query-object-syntax": "error"
   }
 }

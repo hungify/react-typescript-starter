@@ -24,9 +24,8 @@
     "importsNotUsedAsValues": "error",
     "preserveValueImports": true,
     "baseUrl": ".",
-    "typeRoots": ["src/@types"],
     "paths": {
-      "~/*": ["src/*"]
+      "#/*": ["src/*"]
     }
   },
   "include": ["src/**/*", ".eslintrc.*"],
