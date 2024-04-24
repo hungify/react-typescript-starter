@@ -3,7 +3,7 @@ import { z } from 'zod';
 
 const envSchema = z.object({
   // base
-  baseUrl: z.string().min(1),
+  baseUrl: z.string(),
   dev: z.boolean(),
   mode: z
     .literal('development')
@@ -14,7 +14,7 @@ const envSchema = z.object({
   ssr: z.boolean(),
 
   // custom
-  viteBaseApi: z.string().min(1).url()
+  viteBaseApi: z.string().url()
 });
 
 type EnvVariables = z.infer<typeof envSchema>;

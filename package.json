@@ -8,18 +8,19 @@
     "build-only": "vite build",
     "type-check": "tsc --noEmit",
     "preview": "vite preview",
-    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint": "eslint . --max-warnings 0",
     "format": "npx prettier --write .",
-    "lint:staged": "lint-staged",
-    "prepare": "husky install"
+    "openapi-ts": "openapi-ts"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "zod": "^3.21.4"
+    "zod": "^3.21.4",
+    "zod-validation-error": "^3.2.0"
   },
   "devDependencies": {
+    "@hey-api/openapi-ts": "^0.42.1",
     "@tanstack/eslint-plugin-query": "^4.29.9",
     "@types/node": "^18.14.6",
     "@types/react": "^18.0.28",
@@ -30,26 +31,27 @@
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-deprecation": "^2.0.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsdoc": "^48.0.0",
+    "eslint-plugin-jsonc": "^2.10.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-n": "^16.3.1",
+    "eslint-plugin-package-json": "^0.11.0",
+    "eslint-plugin-perfectionist": "^2.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.2",
+    "eslint-plugin-regexp": "^2.1.2",
+    "eslint-plugin-vitest": "^0.4.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.4",
     "typescript": "^4.9.5",
     "unplugin-auto-import": "^0.15.1",
     "vite": "^4.1.4",
     "vite-tsconfig-paths": "^3.6.0"
-  },
-  "lint-staged": {
-    "src/**/*.{js,ts,jsx,tsx}": [
-      "npm run lint",
-      "npm run format"
-    ]
   },
   "license": "MIT"
 }

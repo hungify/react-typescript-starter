@@ -1,7 +1,6 @@
 import reactLogo from '#/assets/react.svg';
 import Counter from '#/components/Counter';
 import './App.css';
-import type { EventFor } from './types/event';
 
 function App() {
   const [count, setCount] = useState(0);
